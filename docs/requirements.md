@@ -1,54 +1,46 @@
 # Dental Office Database Requirements
 
 ## Entities and Attributes
-
 ### Patient
--PatientID (Key Attributes)
+-PatientID (Primary Key)
 -FirstName
 -LastName
 -DateOfBirth
 -Phone
 -Email
-
-### Employee 
--EmployeeID (Key Attribute)
--FirstName
--LastName
--JobTitle
--Phone
+-Address
 
 ### Appointment
--AppointmentID (Key Attribute)
--AppointmentDate
--AppointmentTime
--Status
+- AppointmentID (Primary Key)
+- AppointmentDate
+- AppointmentTime
+- Sstatus
+- PatientID
+- DentistID
 
 ### Service
-- ServiceID (Key Attribute)
+- ServiceID (Primary Key)
 - ServiceName
 - Description
-- Price
+- Cost
 
 ### Dentist
-- DentistID (Key Attribute)
-- FirstName
-- LastName
-- Specialty
+-DentistID (Primary Key)
+-FirstName
+-LastName
+-Specialty
 
-### Payment
-- PaymentID (Key Attribute)
-- Amount
-- PaymentDate
+### Treatment
+TreatmentID (Primary Key)
+- TreatmentDate
+- Notes
+- AppointmentID
+- ServiceID
+- DentistID
+
+### Payment 
+-PaymentID (Primary Key)
+ -Amount 
+-PaymentDate 
 - PaymentMethod
-
-  ### Insurance
-  - InsuranceID (Key Attribute)
-  - ProviderName
-  - PolicyNumber
-
-    ### Treatment
-    - TreatmentID (Key Attribute)
-    - TreatmentDate
-    - Notes
-- 
--
+- PatientID 
